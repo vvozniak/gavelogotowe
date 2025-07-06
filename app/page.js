@@ -4,16 +4,15 @@ import { Search, Brain, Clock, Scale, Phone } from "lucide-react"
 
 export default function GaveloWebsite() {
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="min-h-screen" style={{ backgroundColor: "#01161e" }}>
       {/* Navigation */}
-      <nav className="bg-primary border-b border-slate-800 sticky top-0 z-50">
+      <nav className="sticky top-0 z-50 border-b" style={{ backgroundColor: "#01161e", borderColor: "#334155" }}>
         <div className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-             <div className="w-16 h-16 flex items-center justify-center">
-            <img src="/logo1.svg" alt="Gavelo Logo" className="h-32 w-auto" />
-          </div>
-              
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/logo1.svg" alt="Gavelo Logo" className="h-32 w-auto" />
+              </div>
             </div>
             <div className="hidden md:flex items-center space-x-12">
               <a href="#" className="text-slate-400 hover:text-white transition-colors font-light">
@@ -34,7 +33,7 @@ export default function GaveloWebsite() {
       </nav>
 
       {/* Hero Section - 100vh */}
-      <section className="h-screen bg-primary flex items-center">
+      <section className="h-screen flex items-center" style={{ backgroundColor: "#01161e" }}>
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center h-full">
             {/* Left Content */}
@@ -49,12 +48,13 @@ export default function GaveloWebsite() {
                 na zawsze zmieni rynek LegalTech.
               </p>
               <div className="flex space-x-6">
-                <Button className="bg-white text-primary hover:bg-slate-100 px-8 py-3 font-light">
+                <Button className="px-8 py-3 font-light" style={{ backgroundColor: "white", color: "#01161e" }}>
                   Dowiedz się więcej
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white bg-transparent px-8 py-3 font-light"
+                  className="px-8 py-3 font-light bg-transparent"
+                  style={{ borderColor: "#64748b", color: "#cbd5e1" }}
                 >
                   Wypróbuj teraz
                 </Button>
@@ -62,23 +62,26 @@ export default function GaveloWebsite() {
             </div>
 
             {/* Right - Image */}
-  <div className="flex items-center justify-center">
-  <div className="w-full max-w-2xl">
-    <div className="bg-slate-900/30 rounded-lg border border-slate-800 aspect-video flex items-center justify-center overflow-hidden">
-      <img 
-        src="/interfejs.png" 
-        alt="Interfejs aplikacji Gavelo" 
-        className="w-full h-full object-cover rounded-lg"
-      />
-    </div>
-  </div>
-</div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-2xl">
+                <div
+                  className="rounded-lg border aspect-video flex items-center justify-center overflow-hidden"
+                  style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+                >
+                  <img
+                    src="/interfejs.png"
+                    alt="Interfejs aplikacji Gavelo"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-12 lg:px-20 bg-primary">
+      <section className="py-24 px-12 lg:px-20" style={{ backgroundColor: "#01161e" }}>
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-sm text-slate-500 mb-6 font-light tracking-wider">O NAS</div>
           <h2 className="text-4xl font-serif font-light text-white mb-12 leading-tight">
@@ -97,7 +100,7 @@ export default function GaveloWebsite() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 px-12 lg:px-20 bg-primary">
+      <section className="py-24 px-12 lg:px-20" style={{ backgroundColor: "#01161e" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-light text-white mb-8 leading-tight">
@@ -109,7 +112,10 @@ export default function GaveloWebsite() {
             {/* Benefit 1 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-6 border border-slate-700">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-6 border"
+                  style={{ backgroundColor: "#334155", borderColor: "#475569" }}
+                >
                   <Brain className="w-6 h-6 text-slate-400" />
                 </div>
                 <h3 className="text-2xl font-serif font-light text-white mb-6">Wsparcie kontekstowe AI</h3>
@@ -118,7 +124,10 @@ export default function GaveloWebsite() {
                   na problemie, nie na żmudnym researchu. GAVELO to osobisty asystent, który rozumie treść zapytania.
                 </p>
               </div>
-              <div className="bg-slate-900/30 rounded border border-slate-800 p-12 flex items-center justify-center min-h-[300px] backdrop-blur-sm">
+              <div
+                className="rounded border p-12 flex items-center justify-center min-h-[300px]"
+                style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+              >
                 <div className="text-center">
                   <Brain className="w-16 h-16 text-slate-500 mx-auto mb-4" />
                   <p className="text-slate-500 font-light">Kontekstowe AI</p>
@@ -128,14 +137,20 @@ export default function GaveloWebsite() {
 
             {/* Benefit 2 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="bg-slate-900/30 rounded border border-slate-800 p-12 flex items-center justify-center min-h-[300px] backdrop-blur-sm lg:order-first">
+              <div
+                className="rounded border p-12 flex items-center justify-center min-h-[300px] lg:order-first"
+                style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+              >
                 <div className="text-center">
                   <Search className="w-16 h-16 text-slate-500 mx-auto mb-4" />
                   <p className="text-slate-500 font-light">Precyzyjne wyszukiwanie</p>
                 </div>
               </div>
               <div>
-                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-6 border border-slate-700">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-6 border"
+                  style={{ backgroundColor: "#334155", borderColor: "#475569" }}
+                >
                   <Search className="w-6 h-6 text-slate-400" />
                 </div>
                 <h3 className="text-2xl font-serif font-light text-white mb-6">
@@ -152,7 +167,10 @@ export default function GaveloWebsite() {
             {/* Benefit 3 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-6 border border-slate-700">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-6 border"
+                  style={{ backgroundColor: "#334155", borderColor: "#475569" }}
+                >
                   <Clock className="w-6 h-6 text-slate-400" />
                 </div>
                 <h3 className="text-2xl font-serif font-light text-white mb-6">Skraca czas researchu o 75%</h3>
@@ -162,7 +180,10 @@ export default function GaveloWebsite() {
                   oszczędność czasu i nowy standard w branży.
                 </p>
               </div>
-              <div className="bg-slate-900/30 rounded border border-slate-800 p-12 flex items-center justify-center min-h-[300px] backdrop-blur-sm">
+              <div
+                className="rounded border p-12 flex items-center justify-center min-h-[300px]"
+                style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+              >
                 <div className="text-center">
                   <Clock className="w-16 h-16 text-slate-500 mx-auto mb-4" />
                   <p className="text-slate-500 font-light">75% oszczędności czasu</p>
@@ -174,7 +195,7 @@ export default function GaveloWebsite() {
       </section>
 
       {/* Services */}
-      <section className="py-24 px-12 lg:px-20 bg-primary">
+      <section className="py-24 px-12 lg:px-20" style={{ backgroundColor: "#01161e" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="text-sm text-slate-500 mb-6 font-light tracking-wider">NASZE USŁUGI</div>
@@ -184,9 +205,15 @@ export default function GaveloWebsite() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
-            <Card className="bg-slate-900/30 text-white border-slate-800 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+            >
               <CardHeader className="pb-6">
-                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-4 border border-slate-700">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-4 border"
+                  style={{ backgroundColor: "#334155", borderColor: "#475569" }}
+                >
                   <Scale className="w-6 h-6 text-slate-400" />
                 </div>
                 <CardTitle className="text-lg font-serif font-light">Automatyczne streszczenia wyroków</CardTitle>
@@ -198,9 +225,15 @@ export default function GaveloWebsite() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-900/30 text-white border-slate-800 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+            >
               <CardHeader className="pb-6">
-                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-4 border border-slate-700">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-4 border"
+                  style={{ backgroundColor: "#334155", borderColor: "#475569" }}
+                >
                   <Search className="w-6 h-6 text-slate-400" />
                 </div>
                 <CardTitle className="text-lg font-serif font-light text-white">
@@ -214,9 +247,15 @@ export default function GaveloWebsite() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-900/50 text-white border-orange-500/20 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.5)", borderColor: "rgba(249, 115, 22, 0.2)" }}
+            >
               <CardHeader className="pb-6">
-                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-4 border border-slate-700">
+                <div
+                  className="w-12 h-12 rounded-full flex items-center justify-center mb-4 border"
+                  style={{ backgroundColor: "#334155", borderColor: "#475569" }}
+                >
                   <Brain className="w-6 h-6 text-slate-400" />
                 </div>
                 <CardTitle className="text-lg font-serif font-light text-white">
@@ -234,7 +273,7 @@ export default function GaveloWebsite() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 px-12 lg:px-20 bg-primary">
+      <section className="py-24 px-12 lg:px-20" style={{ backgroundColor: "#01161e" }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <div className="text-sm text-slate-500 mb-6 font-light tracking-wider">POZNAJ GAVELO</div>
@@ -249,7 +288,10 @@ export default function GaveloWebsite() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
-            <Card className="bg-slate-900/30 text-white border-slate-800 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+            >
               <CardContent className="p-8">
                 <h4 className="text-xl font-serif font-light mb-2 text-white">Arkadiusz Kryska</h4>
                 <p className="text-sm text-slate-500 mb-6 font-light">Koordynator i aspekty prawne projektu</p>
@@ -262,7 +304,10 @@ export default function GaveloWebsite() {
             </Card>
 
             {/* Team Member 2 */}
-            <Card className="bg-slate-900/30 text-white border-slate-800 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+            >
               <CardContent className="p-8">
                 <h4 className="text-xl font-serif font-light mb-2 text-white">Mateusz Milewski</h4>
                 <p className="text-sm text-slate-500 mb-6 font-light">Machine Learning Researcher</p>
@@ -275,7 +320,10 @@ export default function GaveloWebsite() {
             </Card>
 
             {/* Team Member 3 */}
-            <Card className="bg-slate-900/30 text-white border-slate-800 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+            >
               <CardContent className="p-8">
                 <h4 className="text-xl font-serif font-light mb-2 text-white">Jakub Wiśniewski</h4>
                 <p className="text-sm text-slate-500 mb-6 font-light">Software developer, architekt systemu</p>
@@ -287,7 +335,10 @@ export default function GaveloWebsite() {
             </Card>
 
             {/* Team Member 4 */}
-            <Card className="bg-slate-900/30 text-white border-slate-800 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+            >
               <CardContent className="p-8">
                 <h4 className="text-xl font-serif font-light mb-2 text-white">Paweł Rusak</h4>
                 <p className="text-sm text-slate-500 mb-6 font-light">
@@ -302,7 +353,10 @@ export default function GaveloWebsite() {
             </Card>
 
             {/* Team Member 5 */}
-            <Card className="bg-slate-900/50 text-white border-orange-500/20 backdrop-blur-sm">
+            <Card
+              className="text-white border"
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.5)", borderColor: "rgba(249, 115, 22, 0.2)" }}
+            >
               <CardContent className="p-8">
                 <h4 className="text-xl font-serif font-light mb-2 text-white">Igor Kocoń</h4>
                 <p className="text-sm text-slate-500 mb-6 font-light">Operacje, rozwój i finanse</p>
@@ -318,12 +372,12 @@ export default function GaveloWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-white py-12 border-t border-slate-800">
+      <footer className="text-white py-12 border-t" style={{ backgroundColor: "#01161e", borderColor: "#334155" }}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
-                <Scale className="w-4 h-4 text-primary" />
+                <Scale className="w-4 h-4" style={{ color: "#01161e" }} />
               </div>
               <span className="font-serif font-light text-lg">GAVELO</span>
             </div>
