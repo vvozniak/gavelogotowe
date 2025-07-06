@@ -1,8 +1,33 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Search, Brain, Clock, Scale, Phone } from "lucide-react"
 
 export default function GaveloWebsite() {
+  const handleLearnMore = () => {
+    // Scroll to about section
+    document.getElementById("o-nas")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+
+  const handleTryNow = () => {
+    window.open("tel:+48882069684", "_self")
+  }
+
+  const handlePhoneClick = () => {
+    window.open("tel:+48882069684", "_self")
+  }
+
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#01161e" }}>
       {/* Navigation */}
@@ -15,17 +40,26 @@ export default function GaveloWebsite() {
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-12">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors font-light">
+              <button
+                onClick={() => scrollToSection("funkcje")}
+                className="text-slate-400 hover:text-white transition-colors font-light cursor-pointer"
+              >
                 Funkcje
-              </a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors font-light">
+              </button>
+              <button
+                onClick={() => scrollToSection("o-nas")}
+                className="text-slate-400 hover:text-white transition-colors font-light cursor-pointer"
+              >
                 O nas
-              </a>
+              </button>
               <div className="flex items-center space-x-6 text-sm text-slate-400">
-                <div className="flex items-center">
+                <button
+                  onClick={handlePhoneClick}
+                  className="flex items-center hover:text-white transition-colors cursor-pointer"
+                >
                   <Phone className="w-4 h-4 mr-2" />
                   <span>+48 882 069 684</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -48,12 +82,17 @@ export default function GaveloWebsite() {
                 na zawsze zmieni rynek LegalTech.
               </p>
               <div className="flex space-x-6">
-                <Button className="px-8 py-3 font-light" style={{ backgroundColor: "white", color: "#01161e" }}>
+                <Button
+                  onClick={handleLearnMore}
+                  className="px-8 py-3 font-light hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: "white", color: "#01161e" }}
+                >
                   Dowiedz się więcej
                 </Button>
                 <Button
+                  onClick={handleTryNow}
                   variant="outline"
-                  className="px-8 py-3 font-light bg-transparent"
+                  className="px-8 py-3 font-light bg-transparent hover:bg-slate-800 transition-colors"
                   style={{ borderColor: "#64748b", color: "#cbd5e1" }}
                 >
                   Wypróbuj teraz
@@ -81,7 +120,7 @@ export default function GaveloWebsite() {
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-12 lg:px-20" style={{ backgroundColor: "#01161e" }}>
+      <section className="py-24 px-12 lg:px-20" id="o-nas" style={{ backgroundColor: "#01161e" }}>
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-sm text-slate-500 mb-6 font-light tracking-wider">O NAS</div>
           <h2 className="text-4xl font-serif font-light text-white mb-12 leading-tight">
@@ -195,7 +234,7 @@ export default function GaveloWebsite() {
       </section>
 
       {/* Services */}
-      <section className="py-24 px-12 lg:px-20" style={{ backgroundColor: "#01161e" }}>
+      <section className="py-24 px-12 lg:px-20" id="funkcje" style={{ backgroundColor: "#01161e" }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="text-sm text-slate-500 mb-6 font-light tracking-wider">NASZE USŁUGI</div>
@@ -206,8 +245,9 @@ export default function GaveloWebsite() {
 
           <div className="grid md:grid-cols-3 gap-12">
             <Card
-              className="text-white border"
+              className="text-white border hover:border-slate-600 transition-colors cursor-pointer"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+              onClick={handleTryNow}
             >
               <CardHeader className="pb-6">
                 <div
@@ -226,8 +266,9 @@ export default function GaveloWebsite() {
             </Card>
 
             <Card
-              className="text-white border"
+              className="text-white border hover:border-slate-600 transition-colors cursor-pointer"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
+              onClick={handleTryNow}
             >
               <CardHeader className="pb-6">
                 <div
@@ -248,8 +289,9 @@ export default function GaveloWebsite() {
             </Card>
 
             <Card
-              className="text-white border"
+              className="text-white border hover:border-orange-400/40 transition-colors cursor-pointer"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.5)", borderColor: "rgba(249, 115, 22, 0.2)" }}
+              onClick={handleTryNow}
             >
               <CardHeader className="pb-6">
                 <div
@@ -289,7 +331,7 @@ export default function GaveloWebsite() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Team Member 1 */}
             <Card
-              className="text-white border"
+              className="text-white border hover:border-slate-600 transition-colors"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
             >
               <CardContent className="p-8">
@@ -305,7 +347,7 @@ export default function GaveloWebsite() {
 
             {/* Team Member 2 */}
             <Card
-              className="text-white border"
+              className="text-white border hover:border-slate-600 transition-colors"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
             >
               <CardContent className="p-8">
@@ -321,7 +363,7 @@ export default function GaveloWebsite() {
 
             {/* Team Member 3 */}
             <Card
-              className="text-white border"
+              className="text-white border hover:border-slate-600 transition-colors"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
             >
               <CardContent className="p-8">
@@ -336,7 +378,7 @@ export default function GaveloWebsite() {
 
             {/* Team Member 4 */}
             <Card
-              className="text-white border"
+              className="text-white border hover:border-slate-600 transition-colors"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.3)", borderColor: "#334155" }}
             >
               <CardContent className="p-8">
@@ -354,7 +396,7 @@ export default function GaveloWebsite() {
 
             {/* Team Member 5 */}
             <Card
-              className="text-white border"
+              className="text-white border hover:border-orange-400/40 transition-colors"
               style={{ backgroundColor: "rgba(15, 23, 42, 0.5)", borderColor: "rgba(249, 115, 22, 0.2)" }}
             >
               <CardContent className="p-8">
@@ -376,13 +418,14 @@ export default function GaveloWebsite() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-6 h-6 bg-white rounded flex items-center justify-center">
-                <Scale className="w-4 h-4" style={{ color: "#01161e" }} />
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/logo1.svg" alt="Gavelo Logo" className="h-16 w-auto" />
               </div>
-              <span className="font-serif font-light text-lg">GAVELO</span>
             </div>
             <div className="text-sm text-slate-500 font-light">
-              <p>Kontakt: +48 882 069 684</p>
+              <button onClick={handlePhoneClick} className="hover:text-white transition-colors cursor-pointer">
+                Kontakt: +48 882 069 684
+              </button>
             </div>
           </div>
         </div>
